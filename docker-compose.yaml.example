@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  getgrassbot:
+    image: tsecretino/getgrass:amd
+    restart: unless-stopped
+    deploy:
+      mode: replicated
+      replicas: 10
+    environment:
+      USER_ID:
+      PROXY_HOST:
+      PROXY_USERNAME:
+      PROXY_PASSWORD:
+      PROXY_PORT:
+      TOKEN:
